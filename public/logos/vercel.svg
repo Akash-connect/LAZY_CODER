@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none">
+  <!-- Vercel Triangle -->
+  <path d="M16 5L28 26H4L16 5Z" fill="#FFFFFF"/>
+  <!-- Vercel Wordmark -->
+  <text x="36" y="21" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="0.05em">VERCEL</text>
+</svg>

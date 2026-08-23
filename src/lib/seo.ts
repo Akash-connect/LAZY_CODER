@@ -1,6 +1,4 @@
-import type { Metadata, Route } from 'next';
-
-const baseUrl = 'https://lazycoder.dev';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lazycoder.dev';
 
 export const siteMetadata = {
   title: {

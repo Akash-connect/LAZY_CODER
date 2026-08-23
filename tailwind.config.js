@@ -8,8 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
-        mono: ['var(--font-space)', 'Space Grotesk', 'monospace'],
+        sans: ['var(--font-instrument)', 'Inter', 'sans-serif'],
+        archivo: ['var(--font-archivo)', 'sans-serif'],
+        instrument: ['var(--font-instrument)', 'sans-serif'],
+        chivo: ['var(--font-chivo)', 'monospace'],
+        mono: ['var(--font-chivo)', 'monospace'],
+        display: ['var(--font-archivo)', 'sans-serif'],
+        deathstar: ['"Death Star"', 'var(--font-archivo)', 'system-ui', 'sans-serif'],
       },
     },
   },

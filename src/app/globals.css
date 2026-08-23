@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Death Star';
+  src: local('Death Star'), local('DeathStar'), local('Death Star Regular'),
+       url('https://fonts.cdnfonts.com/s/17582/DeathStar-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #090c16;
   --foreground: #F5F5F5;
@@ -10,10 +19,40 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-instrument), Inter, system-ui, sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+.font-display {
+  font-family: var(--font-archivo), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-instrument), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-chivo), monospace;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-archivo), sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+p, div {
+  font-family: var(--font-instrument), sans-serif;
+}
+
+.mono {
+  font-family: var(--font-chivo), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 @keyframes float {

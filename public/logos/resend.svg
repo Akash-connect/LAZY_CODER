@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none">
+  <!-- Resend Cube/Chevron -->
+  <path d="M6 8l10-5 10 5v12l-10 5-10-5V8z" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16 3v12m10-7l-10 5-10-5" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Resend Wordmark -->
+  <text x="36" y="21" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="0.05em">RESEND</text>
+</svg>

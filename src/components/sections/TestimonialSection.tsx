@@ -17,10 +17,12 @@ export function TestimonialSection() {
 
   return (
     <section className="relative z-10 py-[80px] md:py-[120px] content-auto">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12">
-        <div className="max-w-[800px] mx-auto text-center flex flex-col items-center mb-[48px]">
-          <Quote className="w-[32px] h-[32px] text-white/20 mb-6" />
-          <blockquote className="text-2xl sm:text-[32px] leading-[1.2] font-medium text-white tracking-tight">
+      <div className="w-full px-8 md:px-14 lg:px-20">
+        <div className="max-w-[850px] mx-auto text-center flex flex-col items-center mb-[48px]">
+          <span className="text-[12px] font-mono tracking-[0.08em] text-[#E9E6FF]/60 uppercase block mb-4 font-bold">
+            [04] CLIENT FEEDBACK
+          </span>
+          <blockquote className="text-[28px] sm:text-[36px] md:text-[44px] leading-[1.05] font-archivo font-black text-white tracking-[-0.04em] uppercase">
             &ldquo;LAZY CODER shipped our MVP in 18 days. Our previous agency took 3 months just to make a static mockup.&rdquo;
           </blockquote>
           <div className="mt-8 flex items-center gap-4">
@@ -28,8 +30,8 @@ export function TestimonialSection() {
               AK
             </div>
             <div className="text-left">
-              <div className="font-bold text-white text-sm">Alexandre K.</div>
-              <div className="text-xs text-white/50 font-mono">Founder @ Synapse Flow</div>
+              <div className="font-archivo font-black text-white text-sm uppercase">Alexandre K.</div>
+              <div className="text-[11px] text-white/50 font-mono uppercase tracking-[0.08em]">Founder @ Synapse Flow</div>
             </div>
           </div>
         </div>
@@ -38,13 +40,13 @@ export function TestimonialSection() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="p-[24px] rounded-[16px] bg-white/[0.05] border border-white/10 flex flex-col justify-between"
+              className="p-[28px] rounded-[16px] bg-white/[0.05] border border-white/10 flex flex-col justify-between"
             >
-              <p className="text-sm text-white/80 leading-relaxed italic">
+              <p className="text-[15px] md:text-[16px] font-instrument font-medium text-white/80 leading-[1.6] italic">
                 &ldquo;{card.quote}&rdquo;
               </p>
-              <div className="mt-4 pt-4 border-t border-white/5 text-xs font-mono text-white/50">
-                <strong className="text-white font-sans">{card.author}</strong> — {card.role}
+              <div className="mt-4 pt-4 border-t border-white/5 text-[11px] md:text-[12px] font-mono font-bold uppercase tracking-[0.08em] text-white/50">
+                <strong className="text-white font-archivo">{card.author}</strong> — {card.role}
               </div>
             </div>
           ))}

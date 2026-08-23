@@ -34,7 +34,8 @@ export default function StrokeText({
           strokeWidth="2.5"
           strokeLinejoin="round"
           strokeLinecap="round"
-          className="font-mono font-black text-[72px] select-none tracking-tight"
+          className="font-deathstar text-[68px] select-none tracking-[0.08em]"
+          style={{ fontFamily: '"Death Star", monospace' }}
           initial={{ strokeDasharray: 260, strokeDashoffset: 260, fillOpacity: 0 }}
           animate={{ strokeDashoffset: 0, fillOpacity: 1 }}
           transition={{

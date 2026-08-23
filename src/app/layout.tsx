@@ -1,25 +1,34 @@
 import type { Metadata, Viewport } from 'next';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { Archivo, Instrument_Sans, Chivo_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/SEO/JsonLd';
 import { WebVitals } from '@/app/web-vitals';
+import { AnalyticsProvider } from '@/components/analytics';
 import { siteMetadata } from '@/lib/seo';
 
-const spaceGrotesk = Space_Grotesk({
+const archivo = Archivo({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space',
+  variable: '--font-archivo',
+  weight: ['700', '800', '900'],
+  preload: true,
+});
+
+const instrument = Instrument_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-instrument',
   weight: ['400', '500', '600', '700'],
   preload: true,
 });
 
-const inter = Inter({
+const chivo = Chivo_Mono({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-chivo',
+  weight: ['400', '700'],
   preload: true,
 });
 
@@ -40,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${spaceGrotesk.variable} ${inter.variable}`}
+      className={`scroll-smooth ${archivo.variable} ${instrument.variable} ${chivo.variable}`}
     >
       <head>
         <JsonLd />
@@ -48,6 +57,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-[#0A0A1A] text-[#F5F5F5] font-sans antialiased flex flex-col selection:bg-[#F9A8FF]/30 selection:text-white">
         <WebVitals />
+        <AnalyticsProvider />
         <Navbar />
         <main className="flex-1 w-full">
           {children}

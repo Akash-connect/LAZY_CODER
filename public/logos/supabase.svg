@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 32" fill="none">
+  <!-- Supabase Bolt -->
+  <path d="M19.5 4.5c-.8-.9-2.2-.4-2.4.8l-2.2 11.2h7.8c1.3 0 2.1 1.4 1.4 2.5L14.5 27.5c-.8.9-2.2.4-2.4-.8l2.2-11.2H6.5c-1.3 0-2.1-1.4-1.4-2.5L14.5 4.5z" fill="#3ECF8E"/>
+  <!-- Supabase Wordmark -->
+  <text x="36" y="21" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="0.05em">SUPABASE</text>
+</svg>

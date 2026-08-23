@@ -1,117 +1,121 @@
-export interface PricingTier {
+export interface PricingPlan {
   id: string;
   name: string;
-  price: string;
-  billing: string;
+  priceINR: string;
+  priceUSD: string;
+  positioning: string;
   description: string;
+  timeline: string;
   popular?: boolean;
-  features: string[];
+  productFeatures: string[];
+  designFeatures: string[];
+  engineeringFeatures: string[];
+  integrationFeatures: string[];
+  launchFeatures: string[];
+  idealFor: string[];
+  notIdealFor: string[];
   ctaText: string;
-  ctaStyle: 'outline' | 'gradient' | 'white';
 }
 
-export const pricingTiers: PricingTier[] = [
+export const pricingPlansData: PricingPlan[] = [
   {
     id: 'starter',
-    name: 'STARTER MVP',
-    price: '$5k',
-    billing: '/one-time',
-    description: 'High-conversion landing page + core functional MVP shipped in 2 weeks.',
+    name: 'STARTER',
+    priceINR: '₹1,50,000',
+    priceUSD: '$2,000',
+    positioning: 'FOR VALIDATING AN IDEA',
+    description: 'Get your most important idea into the hands of real users without spending months building features nobody asked for.',
+    timeline: '~7 DAYS SPRINT',
     popular: false,
-    features: [
-      'Next.js 14 App Router + Tailwind CSS',
-      'Core Functional Web App (1-2 Key Workflows)',
-      'Authentication & Database Setup (Supabase)',
-      '2 Weeks Fixed Delivery Timeline',
-      '1 Post-Launch Revision Round',
-      '14 Days Included Bug Support',
-      '100% Full Codebase Ownership'
-    ],
-    ctaText: 'Start Starter MVP',
-    ctaStyle: 'outline'
+    productFeatures: ['Focused MVP scope', 'Core user journey', 'Essential 3–5 screens', 'Responsive mobile experience'],
+    designFeatures: ['UI direction & typography', 'Core design system', 'Mobile responsive layouts'],
+    engineeringFeatures: ['Frontend Next.js app', 'Backend APIs where required', 'Database setup (PostgreSQL/Supabase)', 'Authentication (Email/OTP/Google)'],
+    integrationFeatures: ['Razorpay / Stripe payment checkout', 'Email notifications', 'WhatsApp basic alert', 'Basic third-party API'],
+    launchFeatures: ['Production Vercel deployment', 'Custom domain connection', 'Basic Google Analytics', 'QA testing'],
+    idealFor: ['Validation MVPs', 'Landing + conversion systems', 'Simple web apps', 'Internal prototypes', 'Early-stage founders'],
+    notIdealFor: ['Complex marketplaces', 'Multi-role enterprise software', 'Advanced AI agent fleets', 'Large automation ecosystems'],
+    ctaText: 'START WITH STARTER →'
   },
   {
     id: 'growth',
-    name: 'GROWTH SAAS & AI',
-    price: '$12k',
-    billing: '/one-time',
-    description: 'Complete full-stack SaaS or automated AI product shipped in 3 weeks.',
+    name: 'GROWTH',
+    priceINR: '₹3,50,000',
+    priceUSD: '$5,000',
+    positioning: 'FOR BUILDING THE REAL PRODUCT',
+    description: 'A complete product sprint for founders ready to launch a serious customer-facing product or business system.',
+    timeline: '~21 DAYS SPRINT',
     popular: true,
-    features: [
-      'Everything in Starter MVP included',
-      'Full-Stack Architecture (Multi-tenant, RBAC)',
-      'Custom AI Pipeline / Agent Integration',
-      'Stripe Payments & Subscription Billing',
-      '3 Weeks Fixed Delivery Timeline',
-      'Unlimited Sprint Revisions',
-      '30 Days Dedicated Post-Launch Support',
-      'Interactive WebGL / Framer-Motion Polish'
-    ],
-    ctaText: 'Start Growth Build',
-    ctaStyle: 'gradient'
+    productFeatures: ['Full product planning & user flows', 'Feature architecture & business logic', 'Admin experience & customer portals', 'Multi-role user permissions'],
+    designFeatures: ['Complete UI/UX design system', 'Responsive desktop & mobile views', 'Interaction & loading states', 'Framer Motion polish'],
+    engineeringFeatures: ['Full-stack Next.js + Node backend', 'PostgreSQL database + Redis caching', 'Role-based access control (RBAC)', 'Admin management dashboard'],
+    integrationFeatures: ['Razorpay / Stripe checkout & autopay', 'WhatsApp Business API integration', 'CRM webhooks & lead routing', 'Third-party API connections'],
+    launchFeatures: ['Production deployment & custom domain', 'PostgreSQL backups & logging', '30 days dedicated bug support', 'Operational handover training'],
+    idealFor: ['SaaS products', 'D2C ecommerce stores', 'Customer portals', 'Booking platforms', 'AI-powered products', 'Automation systems'],
+    notIdealFor: ['Multi-tenant enterprise ecosystems requiring custom SLAs'],
+    ctaText: 'BUILD WITH GROWTH →'
   },
   {
     id: 'scale',
-    name: 'SCALE ENTERPRISE',
-    price: '$25k+',
-    billing: '/one-time',
-    description: 'Complex multi-platform ecosystem, mobile apps & enterprise infrastructure.',
+    name: 'SCALE',
+    priceINR: '₹7,00,000+',
+    priceUSD: '$10,000+',
+    positioning: 'FOR COMPLEX SYSTEMS',
+    description: 'Custom architecture and engineering for products that need deeper integrations, advanced automation, AI agents, or enterprise workflows.',
+    timeline: 'CUSTOM MILESTONES',
     popular: false,
-    features: [
-      'Everything in Growth SaaS included',
-      'Cross-Platform Mobile App (React Native/Expo)',
-      'High-Throughput Microservice Architecture',
-      'Enterprise SLA & Dedicated Team Lead',
-      '4-6 Weeks Milestone Sprints',
-      '90 Days SRE & Performance Monitoring',
-      'Custom Security Audits & Compliance'
-    ],
-    ctaText: 'Talk to Architecture Lead',
-    ctaStyle: 'white'
+    productFeatures: ['Advanced multi-role product architecture', 'Multi-tenant B2B SaaS architecture', 'Custom analytics & audit logs', 'Complex operational pipelines'],
+    designFeatures: ['Enterprise design system', 'Custom mobile app UI', 'Real-time telemetry dashboards'],
+    engineeringFeatures: ['High-throughput microservices', 'Background job queues (BullMQ/Redis)', 'Cross-platform React Native apps', 'Database optimization & replication'],
+    integrationFeatures: ['Multiple enterprise APIs', 'CRM / ERP deep sync', 'RazorpayX automated payouts', 'Telephony & WhatsApp fleets'],
+    launchFeatures: ['Multi-region cloud infrastructure', 'SRE monitoring & logging setup', 'Dedicated architecture lead', '90 days post-launch support'],
+    idealFor: ['AI agent & voice fleets', 'Enterprise CRM / ERP', 'Cross-platform mobile apps', 'High-volume fintech platforms'],
+    notIdealFor: ['Simple 1-page landing sites'],
+    ctaText: 'TALK ABOUT SCALE →'
   }
 ];
 
-export const pricingAddOns = [
-  {
-    title: 'Custom AI Agent Integration',
-    price: '$1,500',
-    desc: 'Autonomous LLM agent pipeline connected to your internal tools and APIs.'
-  },
-  {
-    title: 'React Native Mobile Companion',
-    price: '$3,500',
-    desc: 'Native iOS & Android mobile companion app synced with your web backend.'
-  },
-  {
-    title: 'Dedicated SRE & Maintenance',
-    price: '$1,000/mo',
-    desc: 'Continuous performance tuning, database vacuuming, and weekly feature sprints.'
-  }
+export const priceComparisonData = [
+  { capability: 'Product Planning & Scope', starter: '✓', growth: '✓', scale: '✓' },
+  { capability: 'UI/UX & Design System', starter: '✓', growth: '✓', scale: '✓' },
+  { capability: 'Responsive Mobile Layouts', starter: '✓', growth: '✓', scale: '✓' },
+  { capability: 'Backend Architecture', starter: 'Basic', growth: 'Full', scale: 'Advanced Microservices' },
+  { capability: 'Database & Auth', starter: '✓', growth: '✓', scale: 'Advanced RBAC' },
+  { capability: 'Admin Management Dashboard', starter: 'Basic', growth: '✓', scale: 'Advanced Multi-Role' },
+  { capability: 'Razorpay / Stripe Payments', starter: 'Basic Checkout', growth: '✓ + Subscriptions', scale: 'Advanced Autopay & Payouts' },
+  { capability: 'API & CRM Integrations', starter: '1 Integration', growth: 'Multiple APIs', scale: 'Complex Enterprise Systems' },
+  { capability: 'WhatsApp Business Bot', starter: 'Optional', growth: '✓', scale: 'Custom WhatsApp Fleet' },
+  { capability: 'AI Assistants & RAG', starter: 'Optional', growth: '✓', scale: 'Advanced AI Agent Fleets' },
+  { capability: 'Bilingual AI Voice Telephony', starter: '—', growth: 'Optional', scale: '✓' },
+  { capability: 'Post-Launch Support', starter: '14 Days', growth: '30 Days Included', scale: '90 Days Custom SLA' }
 ];
 
-export const pricingFaqs = [
+export const pricingFaqItems = [
   {
-    q: 'What if I need changes after launch?',
-    a: 'Every project includes 14 to 90 days of dedicated post-launch support and bug warranties. If you want ongoing feature additions, you can book weekly sprint blocks or our monthly SRE maintenance plan.'
+    q: 'Is the price fixed?',
+    a: 'Package prices provide a clear starting point. Final pricing is confirmed after we review your exact product scope, integrations, and technical requirements.'
   },
   {
-    q: 'Do you do equity deals or revenue share?',
-    a: 'We operate strictly on fixed-price cash sprints. This ensures 100% alignment, rapid execution, and means you keep 100% of your company equity and profits.'
+    q: 'Does the price include GST?',
+    a: 'Prices shown are exclusive of 18% GST for Indian business invoices. Eligible registered businesses can claim input tax credit.'
   },
   {
-    q: 'How fast can you start?',
-    a: 'We can typically kick off within 48 to 72 hours of contract approval and technical scope alignment.'
+    q: 'Do you charge hourly?',
+    a: 'No. We work strictly on fixed-scope product sprints. You know the exact cost and timeline before any engineering begins.'
   },
   {
-    q: 'What if you do not deliver on time?',
-    a: 'We adhere to strict milestone contracts. If we miss our agreed-upon 21-day timeline due to our own blockers, we work at zero cost until the full scope is live in production.'
+    q: 'Can I start with an MVP?',
+    a: 'Yes. The Starter package (₹1.5L / $2k) is designed specifically for focused validation MVPs shipped in ~7 days.'
   },
   {
-    q: 'Do you sign an NDA before we start?',
-    a: 'Yes, absolutely. We sign mutual non-disclosure agreements before discussing proprietary concepts, codebase access, or business architecture.'
+    q: 'Are third-party API / AI model costs included?',
+    a: 'Third-party fees (OpenAI model usage, WhatsApp API messaging charges, telephony, domain registration, Vercel hosting) are billed directly by the providers and managed in your account.'
   },
   {
-    q: 'What is your refund policy?',
-    a: 'If after the Day 1-2 Discovery phase you feel we are not the right fit before engineering begins, you receive an immediate 100% refund on remaining sprint funds.'
+    q: 'What if I need changes during development?',
+    a: 'New requests during a sprint are reviewed for impact on scope, timeline, and cost before implementation. Core features required for launch stay prioritized.'
+  },
+  {
+    q: 'What happens after launch?',
+    a: 'All plans include dedicated post-launch bug support (14 to 90 days). After that, you can continue with feature sprints or maintenance engagements.'
   }
 ];

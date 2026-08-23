@@ -16,36 +16,31 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full bg-[#070b15]/80 backdrop-blur-xl border-b border-white/[0.08] sticky top-0 z-50 transition-all">
-      <div className="w-full px-8 md:px-14 lg:px-20 h-[72px] flex items-center justify-between">
+    <header className="w-full bg-[#0A0A1A]/90 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 transition-all">
+      <div className="w-full px-6 sm:px-10 lg:px-16 h-[72px] flex items-center justify-between">
         
         {/* Left: Brand Logo */}
         <Link href="/" className="flex items-center gap-3.5 group select-none shrink-0">
-          {/* Logo Badge Icon: <z/> */}
-          <div className="w-[38px] h-[38px] rounded-lg bg-white/[0.05] border border-white/10 flex items-center justify-center shadow-inner group-hover:border-white/25 group-hover:bg-white/[0.08] transition-all">
-            <span className="font-mono text-[13px] font-bold tracking-tight text-white/90">
-              &lt;<span className="text-[#a5b4fc]">z</span>/<span className="text-white/60">&gt;</span>
-            </span>
+          <div className="w-9 h-9 rounded-xl bg-[#E9E6FF] text-[#0A0A1A] font-archivo font-black text-[16px] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+            LC
           </div>
-
-          {/* Brand Name */}
-          <span className="font-sans text-[15px] font-extrabold tracking-[0.08em] text-white uppercase group-hover:text-[#a5b4fc] transition-colors">
+          <span className="font-archivo font-black text-[18px] tracking-[-0.02em] text-white uppercase group-hover:text-[#E9E6FF] transition-colors">
             LAZY CODER
           </span>
         </Link>
 
         {/* Center: Navigation Links */}
-        <nav className="hidden md:flex items-center gap-10 lg:gap-14 text-[12px] font-semibold tracking-[0.14em]">
+        <nav className="hidden md:flex items-center gap-8 text-[12px] font-mono font-bold tracking-[0.08em]">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href !== '/' && !link.href.startsWith('/#') && pathname?.startsWith(link.href));
+            const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
             return (
               <Link
                 key={link.name}
                 href={link.href}
                 className={`relative py-1.5 transition-colors uppercase ${
                   isActive
-                    ? 'text-white border-b-2 border-white pb-1'
-                    : 'text-[#94a3b8] hover:text-white'
+                    ? 'text-[#E9E6FF] border-b-2 border-[#E9E6FF] pb-1'
+                    : 'text-white/60 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -55,18 +50,18 @@ export default function Navbar() {
         </nav>
 
         {/* Right: CTA Actions */}
-        <div className="flex items-center gap-4 shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
           <Link
-            href="/#contact"
-            className="hidden sm:inline-flex items-center justify-center border border-white/20 rounded-md px-5 py-2.5 text-[12px] font-mono font-medium tracking-wider text-white/90 hover:bg-white/10 hover:border-white/40 transition-all"
+            href="/contact"
+            className="hidden sm:inline-flex items-center justify-center font-mono text-[11px] font-bold uppercase tracking-[0.08em] border border-white/20 rounded-xl px-4 py-2.5 text-white hover:bg-white/5 hover:border-white/40 transition-all"
           >
             Book a call
           </Link>
           <Link
-            href="/services"
-            className="inline-flex items-center justify-center bg-[#a5b4fc] hover:bg-[#c7d2fe] text-[#070b15] font-sans font-bold text-[11px] tracking-[0.08em] uppercase px-5 py-2.5 rounded-md shadow-lg shadow-indigo-500/10 transition-all hover:scale-105"
+            href="/contact"
+            className="inline-flex items-center justify-center font-mono font-bold text-[11px] tracking-[0.08em] uppercase bg-[#E9E6FF] hover:bg-white text-black px-4 py-2.5 rounded-xl shadow-lg transition-all hover:scale-105"
           >
-            START A PROJECT
+            Start a Project
           </Link>
         </div>
 

@@ -5,6 +5,7 @@ export interface CaseStudyProject {
   headline: string;
   description: string;
   gradient: string;
+  bannerImage?: string;
   metrics: {
     buildTime: string;
     result: string;
@@ -37,6 +38,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'AI Invoice Automator — $50k MRR in 60 days',
     description: 'Autonomous multi-modal document extraction and automated reconciliation platform for high-volume enterprise accounting teams.',
     gradient: 'from-purple-600/30 via-indigo-600/20 to-blue-900/40',
+    bannerImage: '/banners/banner_ai_invoice.jpg',
     metrics: {
       buildTime: '3 Weeks Build',
       result: '80% Time Saved',
@@ -67,6 +69,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'Real-time multi-currency settlement & risk telemetry',
     description: 'High-frequency cross-border payment gateway processing multi-currency settlements with sub-50ms latency.',
     gradient: 'from-blue-600/30 via-cyan-500/20 to-slate-900/40',
+    bannerImage: '/banners/banner_nexus_fintech.jpg',
     metrics: {
       buildTime: '4 Weeks Build',
       result: '18ms P99 Latency',
@@ -98,6 +101,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'High-conversion digital goods marketplace for 10k+ creators',
     description: 'Scalable two-sided creator platform with instant payouts, custom store builders, and automated affiliate split engines.',
     gradient: 'from-fuchsia-600/30 via-pink-500/20 to-purple-900/40',
+    bannerImage: '/banners/banner_aura_marketplace.jpg',
     metrics: {
       buildTime: '3 Weeks Build',
       result: '10k+ Creators',
@@ -128,6 +132,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'Zero-latency event pipeline & interactive cohort metrics',
     description: 'Privacy-focused product analytics platform capable of streaming millions of user behavioral events with instant cohort aggregation.',
     gradient: 'from-emerald-600/30 via-teal-500/20 to-slate-900/40',
+    bannerImage: '/banners/banner_pulse_analytics.jpg',
     metrics: {
       buildTime: '2 Weeks Build',
       result: '300% User Growth',
@@ -157,6 +162,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'Real-time computer vision pose analysis on device',
     description: 'Next-generation fitness app using on-device ML vision to track workout form, count repetitions, and adapt training routines.',
     gradient: 'from-amber-500/30 via-orange-600/20 to-purple-950/40',
+    bannerImage: '/banners/banner_aurafit_mobile.jpg',
     metrics: {
       buildTime: '4 Weeks Build',
       result: '50k+ Downloads',
@@ -188,6 +194,7 @@ export const workProjects: CaseStudyProject[] = [
     headline: 'Automated fulfillment, inventory forecasting & customer triage',
     description: 'Complete operational automation hub bridging Shopify, Amazon, and 3PL warehouses with proactive restock predictors.',
     gradient: 'from-violet-600/30 via-fuchsia-600/20 to-slate-900/40',
+    bannerImage: '/banners/banner_synapse_ecom.jpg',
     metrics: {
       buildTime: '2 Weeks Build',
       result: '$200k Ops Saved',
