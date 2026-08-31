@@ -184,14 +184,6 @@ export default function HomePage() {
                 </Link>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="pt-4 text-[10px] font-mono text-white/40 uppercase tracking-[0.08em]">
-                NO TECHNICAL SPECIFICATION REQUIRED.
-              </motion.div>
-
-              <motion.div variants={fadeUp} className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-4 text-[10px] font-mono font-bold uppercase tracking-[0.08em] text-white/50">
-                <span>WEB</span> • <span>MOBILE</span> • <span>SOFTWARE</span> • <span>AI</span> • <span>AUTOMATION</span>
-                <span className="text-[#E9E6FF] ml-2">FROM IDEA TO PRODUCTION</span>
-              </motion.div>
             </motion.div>
 
             {/* Right 5 cols: Product System Visualization */}
